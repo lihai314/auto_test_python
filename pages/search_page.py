@@ -29,4 +29,3 @@ class SearchPage:
     def assert_search_results_visible(self):
         expect(self.search_results.first).to_be_visible()  # 验证第一个结果可见
         log.info("搜索结果可见")
-

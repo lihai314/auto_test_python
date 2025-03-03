@@ -9,7 +9,7 @@ Feature: 登录
     Scenario Outline: 成功登录
       When 我输入用户名 "<username>" 和密码 "<password>"
       And 点击登录按钮
-      Then 我应该看到登录成功后的页面
+      Then 我应该跳转到 Dashboard 页面
       Examples:
         | username | password |
         | 13226689104 | max888888 |

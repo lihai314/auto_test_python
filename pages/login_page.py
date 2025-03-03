@@ -15,14 +15,17 @@ class LoginPage:
     def navigate_to_login(self, url: str):
         self.page.goto(url)
         self.page.wait_for_load_state("networkidle")
-        log.info(f"Navigated to login page: {url}")
+        log.info(f"导航到: {url}")
 
     def fill_login_form(self, username: str, password: str):
         self.username_input.fill(username)
+        log.info(f"输入登录账户：{username}")
         self.password_input.fill(password)
-        log.info(f"filled LoinForm: {username,password}")
+        log.info(f"输入密码: {password}")
 
-    def submit_login(self,dashboard_text):
+    def submit_login(self):
         self.submit_button.click()
-        self.page.wait_for_load_state("networkidle")
-        expect(self.page).to_have_title(dashboard_text)
+        log.info(f"点击登录按钮成功")
+
+    def assert_logged(self):
+        assert "dashboard" in self.page.url, "登录后未跳转到 Dashboard 页面"
