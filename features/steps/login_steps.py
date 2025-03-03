@@ -1,4 +1,3 @@
-from playwright.sync_api import expect
 from pytest_bdd import given, when, then, parsers
 from pages.login_page import LoginPage
 from pytest import fixture
@@ -13,7 +12,7 @@ def login_page(page):
 def navigate_to_login_page(login_page):
     login_page.navigate_to_login("https://testcenter.qdhdkj.com/login")
 
-@when('我输入用户名 "<username>" 和密码 "<password>"')
+@when(parsers.parse('我输入用户名 "<username>" 和密码 "<password>"'))
 def login(login_page: LoginPage, username: str, password: str):
     login_page.fill_login_form(username, password)
 

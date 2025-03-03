@@ -1,6 +1,6 @@
 import pytest
 from pytest_bdd import scenario
-from steps.search_steps import *  # 强制加载步骤定义
+
 
 @pytest.mark.skip
 @scenario('../features/search.feature', '成功搜索')
