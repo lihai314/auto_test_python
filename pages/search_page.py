@@ -1,6 +1,7 @@
 # pages/search_page.py
-from playwright.sync_api import Page, expect
 import logging
+
+from playwright.sync_api import Page, expect
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)
