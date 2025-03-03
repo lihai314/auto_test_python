@@ -1,0 +1,7 @@
+2025-02-28 16:59:45 INFO 初始化 Playwright
+2025-02-28 16:59:45 INFO 启动 Chromium 浏览器
+2025-02-28 16:59:48 INFO 跳转至 https://www.baidu.cn
+2025-02-28 16:59:48 ERROR 测试失败，截图已保存至: reports\logs\screenshots\FAILED_test_successful_search[python].png
+2025-02-28 16:59:49 INFO 跳转至 https://www.baidu.cn
+2025-02-28 16:59:49 ERROR 测试失败，截图已保存至: reports\logs\screenshots\FAILED_test_failed_search.png
+2025-02-28 16:59:50 INFO 关闭 Chromium 浏览器
